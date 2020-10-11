@@ -1,0 +1,32 @@
+{
+  "name": "ansi-code",
+  "version": "1.0.0",
+  "description": "Catalog of ANSI standard codes for ASCII terminals",
+  "main": "lib/common/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "!lib/**/*.tsbuildinfo",
+    "tsconfig.json",
+    "tsconfig.esm.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf lib",
+    "build": "tsc -b tsconfig.json tsconfig.esm.json",
+    "watch": "npm run build -- --watch",
+    "prebuild": "npm run clean",
+    "start": "npm run watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.11.5",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.0.7",
+    "typescript": "^4.0.3"
+  }
+}
